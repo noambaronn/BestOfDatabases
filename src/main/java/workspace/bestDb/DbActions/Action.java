@@ -1,4 +1,4 @@
-package workspace.bestDb.AbActions;
+package workspace.bestDb.DbActions;
 
 import workspace.bestDb.DataStructure.Schema;
 

@@ -1,6 +1,12 @@
-package workspace.bestDb.AbActions;
+package workspace.bestDb.DbActions;
 
-public class DeleteAllTable {
+import workspace.bestDb.DataStructure.Schema;
+
+public class DeleteAllTable implements Action {
+    @Override
+    public void doDbAction(Schema schema) {
+
+    }
     /**
      * gets a name of table and
      * remove it from the hash map,

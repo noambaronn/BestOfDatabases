@@ -1,4 +1,4 @@
-package workspace.bestDb.AbActions;
+package workspace.bestDb.DbActions;
 
 import workspace.bestDb.DataStructure.Record;
 import workspace.bestDb.DataStructure.Schema;
@@ -40,9 +40,14 @@ public class insert implements Action{
                 ArrayList<Value> addValue = new ArrayList<>();
                 addValue.add(this.recordNameTheValueToInsert.get(i));
                 int numberOfFields = addValue.size();
-                Record addRecord = new Record()
+                Record addRecord = new Record(this.theRecordToBeChanged.get(i).getRecordsName(),
+                        addValue, numberOfFields);
+            }
+            else{
+                ArrayList<Value> insertInTo = theExistRecords.get(i).getValues();
+                insertInTo.add(this.theValuesToInsert.get(i));
+                theExistRecords.get(i).setValues(insertInTo);
             }
         }
-        schema.getAllTables().get(this.tableName).setRecords();
     }
 }
